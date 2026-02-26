@@ -3,16 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Onepager</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Pink Pong</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="wrap">
-      <h1>It works</h1>
-      <p id="status">Wenn du das siehst, lädt index.html.</p>
-      <button id="btn">Click</button>
+    <main class="game-shell" aria-label="Pink Pong game area">
+      <header class="hud" aria-live="polite">
+        <div class="score" id="scoreboard">0 : 0</div>
+      </header>
+
+      <canvas id="game" aria-label="Pong Spielfeld" role="img"></canvas>
+
+      <p class="status" id="status">Space starten • W/S oder ↑/↓ bewegen</p>
+      <p class="hint">W/S or ↑/↓ • Space pause • R restart</p>
+
+      <button id="mobileButton" class="mobile-button" type="button">Desktop recommended</button>
     </main>
 
-    <script src="./app.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
